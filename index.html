@@ -3,15 +3,19 @@
 <body>
 
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
+
     html {
         height: 100%;
     }
+
     body {
         min-height: 100%;
         background: #eee;
@@ -22,6 +26,7 @@
         line-height: 26px;
         padding-bottom: 50px;
     }
+
     .container {
         max-width: 700px;
         background: #fff;
@@ -31,49 +36,61 @@
         padding: 40px;
         margin-top: 50px;
     }
+
     .header {
         margin-bottom: 30px;
     }
+
     .header .full-name {
         font-size: 40px;
         text-transform: uppercase;
         margin-bottom: 5px;
     }
+
     .header .first-name {
         font-weight: 700;
     }
+
     .header .last-name {
         font-weight: 300;
     }
+
     .header .contact-info {
         margin-bottom: 20px;
     }
+
     .header .email,
     .header .phone {
         color: #999;
         font-weight: 300;
     }
+
     .header .separator {
         height: 10px;
         display: inline-block;
         border-left: 2px solid #999;
         margin: 0px 10px;
     }
+
     .header .position {
         font-weight: bold;
         display: inline-block;
         margin-right: 10px;
         text-decoration: underline;
     }
+
     .details {
         line-height: 20px;
     }
+
     .details .section {
         margin-bottom: 40px;
     }
+
     .details .section:last-of-type {
         margin-bottom: 0px;
     }
+
     .details .section__title {
         letter-spacing: 2px;
         color: #54AFE4;
@@ -81,55 +98,69 @@
         margin-bottom: 10px;
         text-transform: uppercase;
     }
+
     .details .section__list-item {
         margin-bottom: 40px;
     }
+
     .details .section__list-item:last-of-type {
         margin-bottom: 0;
     }
+
     .details .left,
     .details .right {
         vertical-align: top;
         display: inline-block;
     }
+
     .details .left {
         width: 40%;
     }
+
     .details .right {
         text-align: right;
         width: 59%;
     }
+
     .details .name {
         font-weight: bold;
     }
+
     a {
         text-decoration: none;
         color: #000;
         font-style: italic;
     }
+
     a:hover {
         text-decoration: underline;
         color: #000;
     }
+
     .details .skills {
     }
+
     .details .skills__item {
         margin-bottom: 10px;
     }
+
     .details .skills__item .right input {
         display: none;
     }
+
     .details .skills__item .right label {
         display: inline-block;
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         background: #C3DEF3;
-        border-radius: 20px;
+        border-radius: 15px;
         margin-right: 3px;
     }
+
     .details .skills__item .right input:checked + label {
         background: #79A9CE;
     }
+
     .text {
         text-align: justify;
     }
@@ -151,7 +182,7 @@
         <div class="about">
             <span class="position">Full Stack Software Engineer </span>
             <span class="desc">
-        Over the last 12+ years, I have been professionally working as a full stack web developer in software industries. I have strong professional working experience in Ruby On Rails, Laravel, Drupal, Wordpress, ReactJS, Responsive Layous, PostgreSQL
+        Over the last 12+ years, I have been professionally working as a full stack web developer in software industries. I have strong professional working experience in Ruby On Rails, Laravel, Drupal, Wordpress, ReactJS, Responsive Layouts, PostgreSQL.
       </span>
         </div>
     </div>
@@ -167,7 +198,9 @@
                     </div>
                     <div class="right">
                         <div class="name">Sr. Software Engineer</div>
-                        <div class="desc">Software Development with Ruby on Rails, Laravel, ReactJS, API development, PostgreSQL, MySQL, TDD, jQuery, GIT, Amazon Web Services (AWS), HTML5, CSS3</div>
+                        <div class="desc">Software Development with Ruby on Rails, Laravel, ReactJS, API development,
+                            PostgreSQL, MySQL, TDD, jQuery, GIT, Amazon Web Services (AWS), HTML5, CSS3
+                        </div>
                     </div>
                 </div>
                 <div class="section__list-item">
@@ -178,7 +211,9 @@
                     </div>
                     <div class="right">
                         <div class="name">Sr. Software Engineer</div>
-                        <div class="desc">Web application development with PHP, Laravel, Wordpress, Drupal, HTML5, CSS3</div>
+                        <div class="desc">Web application development with PHP, Laravel, Wordpress, Drupal, HTML5,
+                            CSS3
+                        </div>
                     </div>
                 </div>
                 <div class="section__list-item">
@@ -189,7 +224,9 @@
                     </div>
                     <div class="right">
                         <div class="name">Sr. Software Engineer</div>
-                        <div class="desc">Software Development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap3, jQuery</div>
+                        <div class="desc">Software Development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap3,
+                            jQuery
+                        </div>
                     </div>
                 </div>
                 <div class="section__list-item">
@@ -201,7 +238,8 @@
                     <div class="right">
                         <div class="name">Software Engineer</div>
                         <div class="desc">Web Application Development with Ruby On Rails, MySQL, Drupal,
-                            Joomla, Wordpress</div>
+                            Joomla, Wordpress
+                        </div>
                     </div>
                 </div>
 
@@ -232,62 +270,286 @@
             <div class="section__title">Recent Projects</div>
             <div class="section__list">
                 <div class="section__list-item">
-                    <div class="name"><a href="https://dam.robi.com.bd" target="_blank"> Digital Asset Management</a></div>
-                    <div class="text">I led the development of a web application using Laravel for the backend and ReactJS with Redux and Saga for the frontend. My responsibilities included client interaction, designing the architecture, leading the team, and creating APIs for web and mobile platforms. I developed the frontend and managed User Acceptance Testing (UAT) to ensure compliance with all specifications and client requirements, enhancing user engagement and streamlining operations.</div>
+                    <div class="name"><a href="https://dam.robi.com.bd" target="_blank"> Digital Asset Management</a>
+                    </div>
+                    <div class="text">I led the development of a web application using Laravel for the backend and
+                        ReactJS with Redux and Saga for the frontend. My responsibilities included client interaction,
+                        designing the architecture, leading the team, and creating APIs for web and mobile platforms. I
+                        developed the frontend and managed User Acceptance Testing (UAT) to ensure compliance with all
+                        specifications and client requirements, enhancing user engagement and streamlining operations.
+                    </div>
                 </div>
 
                 <div class="section__list-item">
                     <div class="name"><a href="https://www.uphance.com/" target="_blank">Uphance ERP</a></div>
-                    <div class="text">As a Full Stack Ruby on Rails Developer at Uphance, a leading B2B apparel ERP on a SaaS model, I focused on fixing production bugs, adding new features, and collaborating on client-specific solutions. My expertise included Ruby on Rails 4, MySQL, jQuery, CSS3, and HTML5, helping to improve platform reliability and meet client needs efficiently.</div>
+                    <div class="text">As a Full Stack Ruby on Rails Developer at Uphance, a leading B2B apparel ERP on a
+                        SaaS model, I focused on fixing production bugs, adding new features, and collaborating on
+                        client-specific solutions. My expertise included Ruby on Rails 4, MySQL, jQuery, CSS3, and
+                        HTML5, helping to improve platform reliability and meet client needs efficiently.
+                    </div>
                 </div>
                 <div class="section__list-item">
-                    <div class="name"><a href="https://www.pickmybrain.world/" target="_blank">PickMyBrain.world</a></div>
-                    <div class="text">As a Full Stack Rails Developer at PickMyBrain.world, I engaged with stakeholders to understand their needs, designed and implemented solutions using Ruby on Rails, jQuery, ReactJS, and PostgreSQL. My role included designing scalable systems and databases, and integrating front and back-end components to enhance platform functionality and user experience, significantly contributing to the platform's development.</div>
+                    <div class="name"><a href="https://www.pickmybrain.world/" target="_blank">PickMyBrain.world</a>
+                    </div>
+                    <div class="text">As a Full Stack Rails Developer at PickMyBrain.world, I engaged with stakeholders
+                        to understand their needs, designed and implemented solutions using Ruby on Rails, jQuery,
+                        ReactJS, and PostgreSQL. My role included designing scalable systems and databases, and
+                        integrating front and back-end components to enhance platform functionality and user experience,
+                        significantly contributing to the platform's development.
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section">
             <div class="section__title">Skills</div>
-            <div class="skills">
-                <div class="skills__item">
-                    <div class="left"><div class="name">
-                        Javascript
-                    </div></div>
-                    <div class="right">
-                        <input  id="ck1" type="checkbox" checked/>
 
-                        <label for="ck1"></label>
-                        <input id="ck2" type="checkbox" checked/>
-
-                        <label for="ck2"></label>
-                        <input id="ck3" type="checkbox" />
-
-                        <label for="ck3"></label>
-                        <input id="ck4" type="checkbox" />
-                        <label for="ck4"></label>
-                        <input id="ck5" type="checkbox" />
-                        <label for="ck5"></label>
-
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        Ruby On Rails
                     </div>
                 </div>
-
-            </div>
-            <div class="skills__item">
-                <div class="left"><div class="name">
-                    CSS</div></div>
                 <div class="right">
-                    <input  id="ck1" type="checkbox" checked/>
+                    <input id="ck1" type="checkbox" checked/>
 
                     <label for="ck1"></label>
                     <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
 
-                    <label for="ck2"></label>
-                    <input id="ck3" type="checkbox" />
 
-                    <label for="ck3"></label>
-                    <input id="ck4" type="checkbox" />
                     <label for="ck4"></label>
-                    <input id="ck5" type="checkbox" />
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        ReactJs
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        Ruby
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        PostgreSQL
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        Amazon AWS
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+<div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        GIT
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        Laravel
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div><div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        PHP
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
                     <label for="ck5"></label>
 
                 </div>
@@ -296,11 +558,15 @@
         </div>
         <div class="section">
             <div class="section__title">
-                Interests
+                Links
             </div>
             <div class="section__list">
-                <div class="section__list-item">
-                    Football, programming.
+                <div class="section__list-item" style="margin-bottom: 5px">
+                    <a href="https://www.linkedin.com/in/bazlurrashid/" target="_blank"><i class="fab fa-linkedin"></i> https://www.linkedin.com/in/bazlurrashid</a>
+                </div><div class="section__list-item" style="margin-bottom: 5px">
+                    <a href="https://github.com/bazlur36" target="_blank"><i class="fab fa-github"></i> https://github.com/bazlur36</a>
+                </div><div class="section__list-item" style="margin-bottom: 5px">
+                    <a href="https://www.facebook.com/bazlur.rashid" target="_blank"><i class="fab fa-facebook-f"></i> https://www.facebook.com/bazlur.rashid</a>
                 </div>
             </div>
         </div>
