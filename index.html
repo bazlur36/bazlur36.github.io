@@ -164,6 +164,27 @@
     .text {
         text-align: justify;
     }
+
+    @media (max-width: 640px) {
+        .header {
+            flex-direction: column;
+        }
+        .header img {
+            width: max-content;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .skills__item {
+            flex-direction: column;
+            display: flex;
+        }
+        .details .skills__item .right {
+            width: 100%;
+            text-align: left;
+        }
+    }
 </style>
 <div class="container">
     <div class="header" style="display: flex">
