@@ -137,10 +137,7 @@
         color: #000;
     }
 
-    .details .skills {
-    }
-
-    .details .skills__item {
+   .details .skills__item {
         margin-bottom: 10px;
     }
 
@@ -174,20 +171,19 @@
             width: max-content;
             margin-bottom: 10px;
         }
-        .skills__item {
+        .skills__item, .section__list-item {
             flex-direction: column;
             display: flex;
         }
 
-        .details .skills__item .right {
+        .details .skills__item .right,
+        .section__list-item .right {
             width: 100%;
             text-align: left;
         }
     }
 
     @media (max-width: 480px) {
-
-
         .header .full-name {
             font-size: 32px;
         }
