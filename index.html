@@ -187,6 +187,21 @@
             text-align: left;
         }
     }
+    @media (max-width: 380px) {
+        .section__list-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section__list-item .left, .section__list-item .right {
+            width: 100%;
+            text-align: left;
+        }
+
+        .header .full-name {
+            font-size: 32px;
+        }
+    }
 </style>
 <div class="container">
     <div class="header" style="display: flex">
@@ -474,27 +489,7 @@
 
                 </div>
             </div>
-            <div class="section">
-                <div class="section__title">Education</div>
-                <div class="section__list">
-                    <div class="section__list-item">
-                        <div class="left" style="width: 100%">
-                            <div class="name">BSc in Computer Science and Engineering</div>
-                            <div class="addr">Khulna University of Engineering & Technology, Bangladesh</div>
-                            <div class="duration">March 2003 - March 2007</div>
-                        </div>
-                    </div>
 
-                    <div class="section__list-item">
-                        <div class="left" style="width: 100%">
-                            <div class="name">MBA in Management Information Systems</div>
-                            <div class="addr">University of Dhaka, Bangladesh</div>
-                            <div class="duration">Jan 2009 - Aug 2010</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <div class="skills__item">
                 <div class="left">
                     <div class="name">
@@ -583,6 +578,27 @@
                     <input id="ck5" type="checkbox"/>
                     <label for="ck5"></label>
 
+                </div>
+            </div>
+
+        </div>
+        <div class="section">
+            <div class="section__title">Education</div>
+            <div class="section__list">
+                <div class="section__list-item">
+                    <div class="left" style="width: 100%">
+                        <div class="name">BSc in Computer Science and Engineering</div>
+                        <div class="addr">Khulna University of Engineering & Technology, Bangladesh</div>
+                        <div class="duration">March 2003 - March 2007</div>
+                    </div>
+                </div>
+
+                <div class="section__list-item">
+                    <div class="left" style="width: 100%">
+                        <div class="name">MBA in Management Information Systems</div>
+                        <div class="addr">University of Dhaka, Bangladesh</div>
+                        <div class="duration">Jan 2009 - Aug 2010</div>
+                    </div>
                 </div>
             </div>
 
