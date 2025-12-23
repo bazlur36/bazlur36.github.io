@@ -203,7 +203,14 @@
             font-size: 32px;
         }
     }
-</style>
+
+    @media print {
+      .page-break {
+        page-break-before: always; /* Works in most browsers */
+        break-before: page;        /* Modern standard */
+      }
+    }
+  </style>
 <div class="container">
     <div class="header" style="display: flex">
         <img src="https://bazlur36.github.io/images/35_bazlur-passport-sized-photo.JPG"
@@ -328,7 +335,7 @@
 
                     </div>
                 </div>
-
+ <div class="page-break"></div>
                 <div class="section__list-item">
                     <div class="name"><a href="https://www.uphance.com/" target="_blank">Uphance ERP</a></div>
                     <div class="text">As a Full Stack Ruby on Rails Developer at Uphance, a leading B2B apparel ERP on a
