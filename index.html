@@ -126,6 +126,10 @@
         font-weight: bold;
     }
 
+    .details .desc {
+        text-align: justify;
+    }
+
     a {
         text-decoration: none;
         color: #000;
@@ -205,9 +209,54 @@
     }
 
     @media print {
+      body {
+        background: #fff;
+        padding: 0;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      
+      .container {
+        max-width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-shadow: none;
+        border-radius: 0;
+      }
+      
+      .header {
+        margin-bottom: 20px;
+      }
+      
+      .header img {
+        height: 120px !important;
+      }
+      
+      .details .section {
+        margin-bottom: 25px;
+      }
+      
+      .details .section__list-item {
+        margin-bottom: 20px;
+      }
+      
+      .details .left {
+        width: 40%;
+      }
+      
+      .details .right {
+        width: 59%;
+        text-align: left;
+      }
+      
       .page-break {
-        page-break-before: always; /* Works in most browsers */
-        break-before: page;        /* Modern standard */
+        page-break-before: always;
+        break-before: page;
+      }
+      
+      a {
+        color: #000;
+        text-decoration: none;
       }
     }
   </style>
@@ -231,7 +280,7 @@
             <div class="about">
                 <span class="position">Full Stack Software Engineer </span>
                 <p class="desc" style="line-height: 20px !important; text-align: justify">
-                    Over the last 12+ years, I have been professionally working as a full stack web developer in software industries. I have strong professional working experience in Ruby On Rails, Laravel, Drupal, Wordpress, ReactJS, Responsive Layouts, PostgreSQL.
+                    Full Stack Software Engineer with 15+ years specializing in Ruby on Rails. Expert in OOP, MVC architecture, RESTful API design, and TDD with RSpec/Capybara. Proficient in PostgreSQL, MySQL, performance optimization, and code reviews. For the last 1 year, I have been working with Agentic AI, including Claude Sonnet, GPT-4o, Gemini, Mistral, and Minmax, successfully delivering 6-10 projects.
                 </p>
             </div>
         </div>
@@ -241,32 +290,20 @@
             <div class="section__title">Experience</div>
             <div class="section__list">
                 <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">Fountain IT Limited</div>
-                        <div class="addr">Adabar, Dhaka</div>
-                        <div class="duration">Aug 2020 - Current</div>
-                    </div>
-                    <div class="right">
-                        <div class="name">Sr. Software Engineer</div>
+                    <div class="left" style="width: 100%">
+                        <div class="name">Fountain IT Limited - Sr. Software Engineer</div>
+                        <div class="addr">Adabar, Dhaka | Aug 2020 - Current</div>
                         <div class="desc">
-                            Software Development with Ruby on Rails, Laravel, ReactJS, Redux, Saga Middleware API development,
-                            PostgreSQL, MySQL, TDD, jQuery, GIT, Amazon Web Services (AWS), HTML5, CSS3
-                            
+                            Developed scalable Ruby on Rails applications following OOP principles and MVC architecture. Designed and implemented RESTful APIs, performed code reviews, and optimized application performance. Utilized TDD with RSpec and Capybara for automated testing. Collaborated with front-end developers on ReactJS integration. Identified and resolved bottlenecks to improve system reliability. Technologies: Ruby on Rails, ReactJS, Redux, PostgreSQL, MySQL, AWS.
                         </div>
                     </div>
                 </div>
                 <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">NG Solutions System Limited</div>
-                        <div class="addr">Adabar, Dhaka</div>
-                        <div class="duration">June 2017 - July 2020</div>
-                    </div>
-                    <div class="right">
-                        <div class="name">Sr. Software Engineer</div>
+                    <div class="left" style="width: 100%">
+                        <div class="name">NG Solutions System Limited - Sr. Software Engineer</div>
+                        <div class="addr">Adabar, Dhaka | June 2017 - July 2020</div>
                         <div class="desc">
-                            <br>Software Development with Ruby on Rails, Laravel, ReactJS, API development,
-                            PostgreSQL, MySQL, TDD, jQuery, GIT, Amazon Web Services (AWS), HTML5, CSS3
-                            
+                            Built and maintained efficient, reusable Laravel applications applying OOP and MVC patterns. Designed RESTful APIs for web and mobile platforms, implemented automated testing frameworks, and collaborated with front-end developers on React integration. Participated in peer code reviews to maintain high code quality standards and ensure best practices. Technologies: Laravel, ReactJS, PostgreSQL, MySQL, AWS.
                         </div>
                     </div>
                 </div>
@@ -277,8 +314,8 @@
                         <div class="duration">April 2015 - May 2017</div>
                     </div>
                     <div class="right">
-                        <div class="name">Sr. Software Engineer</div>
-                        <div class="desc">Web application development with PHP, Laravel, Wordpress, Drupal, HTML5,
+                        <div class="name" style="text-align: right;">Sr. Software Engineer</div>
+                        <div class="desc" style="text-align: right;">Web application development with PHP, Laravel, Wordpress, Drupal, HTML5,
                             CSS3
                         </div>
                     </div>
@@ -290,8 +327,8 @@
                         <div class="duration">Sept 2014 - April 2015</div>
                     </div>
                     <div class="right">
-                        <div class="name">Sr. Software Engineer</div>
-                        <div class="desc">Software Development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap3,
+                        <div class="name" style="text-align: right;">Sr. Software Engineer</div>
+                        <div class="desc" style="text-align: right;">Software Development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap3,
                             jQuery
                         </div>
                     </div>
@@ -303,8 +340,8 @@
                         <div class="duration">Dec 2007 - Aug 2014</div>
                     </div>
                     <div class="right">
-                        <div class="name">Software Engineer</div>
-                        <div class="desc">Web Application Development with Ruby On Rails, MySQL, Drupal,
+                        <div class="name" style="text-align: right;">Software Engineer</div>
+                        <div class="desc" style="text-align: right;">Web Application Development with Ruby On Rails, MySQL, Drupal,
                             Joomla, Wordpress
                         </div>
                     </div>
@@ -319,19 +356,14 @@
                 <div class="section__list-item">
                     <div class="name"><a href="https://dam.robi.com.bd" target="_blank"> Digital Asset Management</a>
                     </div>
-                    <div class="text">I led the development of a web application using Laravel for the backend and
-                        ReactJS with Redux and Saga for the frontend. My responsibilities included client interaction,
-                        designing the architecture, leading the team, and creating APIs for web and mobile platforms. I
-                        developed the frontend and managed User Acceptance Testing (UAT) to ensure compliance with all
-                        specifications and client requirements, enhancing user engagement and streamlining operations.
+                    <div class="text">Led full-stack development using Laravel (backend) and ReactJS with Redux/Saga (frontend). Designed scalable architecture following MVC and OOP principles, created RESTful APIs for web and mobile platforms, and implemented automated testing. Conducted code reviews, managed UAT, and optimized performance for enhanced user engagement and operational efficiency.
                     </div>
                 </div>
 
                 <div class="section__list-item">
                     <div class="name"><a href="https://www.dearbrightly.com/" target="_blank">DearBrightly</a>
                     </div>
-                    <div class="text"> Developed Ruby on Rails backend APIs for a telehealth platform specializing in skincare. Integrated third-party services like DoseSpot and Curexa to enable prescription generation and order placement, ensuring secure, compliant, and seamless workflows between healthcare providers, pharmacies, and patients.
-
+                    <div class="text">Developed scalable Ruby on Rails backend applying OOP principles and MVC architecture. Designed and integrated RESTful APIs with third-party services (DoseSpot, Curexa) for prescription generation and order placement. Implemented automated testing with RSpec, optimized database queries (PostgreSQL), and ensured secure, compliant workflows between healthcare providers and patients.
                     </div>
                 </div>
  <div class="page-break"></div>
@@ -526,6 +558,134 @@
             <div class="skills__item">
                 <div class="left">
                     <div class="name">
+                        MySQL
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        OOP & MVC Architecture
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+<label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        RESTful API Design
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
+                        RSpec & Capybara
+                    </div>
+                </div>
+                <div class="right">
+                    <input id="ck1" type="checkbox" checked/>
+
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+                    <label for="ck1"></label>
+                    <input id="ck2" type="checkbox" checked/>
+
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck4"></label>
+                    <input id="ck5" type="checkbox"/>
+                    <label for="ck5"></label>
+
+                </div>
+            </div>
+
+            <div class="skills__item">
+                <div class="left">
+                    <div class="name">
                         GIT
                     </div>
                 </div>
@@ -603,6 +763,3 @@
 
 </body>
 </html>
-
-
-
