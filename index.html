@@ -1,909 +1,571 @@
 <!DOCTYPE html>
-<html>
-<body>
-
-<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bazlur Rashid – CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+  :root {
+    --ink: #1c2333;
+    --muted: #5b6475;
+    --line: #e3e7ee;
+    --accent: #0f766e;
+    --accent-soft: #e6f4f2;
+    --band: #16213a;
+  }
 
-    html {
-        height: 100%;
-    }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-        min-height: 100%;
-        background: #eee;
-        font-family: 'Lato', sans-serif;
-        font-weight: 400;
-        color: #222;
-        font-size: 14px;
-        line-height: 26px;
-        padding-bottom: 50px;
-    }
+  body {
+    background: #e9ecf1;
+    font-family: 'Inter', -apple-system, 'Segoe UI', Roboto, sans-serif;
+    color: var(--ink);
+    font-size: 9.2pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-    .container {
-        max-width: 700px;
-        background: #fff;
-        margin: 0px auto 0px;
-        box-shadow: 1px 1px 2px #DAD7D7;
-        border-radius: 3px;
-        padding: 40px;
-        margin-top: 50px;
-    }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
 
-    .header {
-        margin-bottom: 30px;
-    }
+  .cv {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 24px auto;
+    background: #fff;
+    box-shadow: 0 4px 24px rgba(20, 30, 50, .12);
+  }
 
-    .header .full-name {
-        font-size: 40px;
-        text-transform: uppercase;
-        margin-bottom: 5px;
-    }
+  /* ---------- Header band ---------- */
+  .hero {
+    background: var(--band);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 18px 13mm;
+  }
 
-    .header .first-name {
-        font-weight: 700;
-    }
+  .hero img {
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid rgba(255, 255, 255, .85);
+    flex-shrink: 0;
+  }
 
-    .header .last-name {
-        font-weight: 300;
-    }
+  .hero h1 {
+    font-size: 28pt;
+    font-weight: 800;
+    letter-spacing: -.5px;
+    line-height: 1.1;
+  }
 
-    .header .contact-info {
-        margin-bottom: 0px;
-    }
+  .hero h1 span { font-weight: 400; color: #9fd8d1; }
 
-    .header .email,
-    .header .phone {
-        color: #4c4c4c;
-        font-weight: 300;
-    }
+  .hero .role {
+    margin-top: 4px;
+    font-size: 11.5pt;
+    font-weight: 500;
+    color: #c9d3e4;
+  }
 
-    .header .separator {
-        height: 10px;
-        display: inline-block;
-        border-left: 2px solid #999;
-        margin: 0px 10px;
-    }
+  .hero .contacts {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-size: 9pt;
+    color: #e2e8f2;
+  }
 
-    .header .position {
-        font-weight: bold;
-        display: inline-block;
-        margin-right: 10px;
-        text-decoration: underline;
-    }
+  .hero .contacts i { color: #5eead4; margin-right: 6px; width: 12px; text-align: center; }
 
-    .details {
-        line-height: 20px;
-    }
+  /* ---------- Body grid ---------- */
+  .body {
+    display: grid;
+    grid-template-columns: 1fr 54mm;
+    gap: 0 7mm;
+    padding: 8mm 13mm 10mm;
+  }
 
-    .details .section {
-        margin-bottom: 40px;
-    }
+  .main, .side { min-width: 0; }
 
-    .details .section:last-of-type {
-        margin-bottom: 0px;
-    }
+  .side {
+    border-left: 1px solid var(--line);
+    padding-left: 6mm;
+  }
 
-    .details .section__title {
-        letter-spacing: 2px;
-        color: #54AFE4;
-        font-weight: bold;
-        margin-bottom: 10px;
-        text-transform: uppercase;
-    }
+  section { margin-bottom: 15px; }
+  section:last-child { margin-bottom: 0; }
 
-    .details .section__list-item {
-        margin-bottom: 30px;
-    }
+  h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
 
-    .details .section__list-item:last-of-type {
-        margin-bottom: 0;
-    }
+  h2::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
 
-    .details .left,
-    .details .right {
-        vertical-align: top;
-        display: inline-block;
-    }
+  .summary { color: #333b4b; }
 
-    .details .left {
-        width: 40%;
-    }
+  /* ---------- Experience timeline ---------- */
+  .job {
+    position: relative;
+    padding-left: 16px;
+    padding-bottom: 11px;
+    border-left: 2px solid var(--line);
+  }
 
-    .details .right {
-        text-align: right;
-        width: 59%;
-    }
+  .job:last-child { padding-bottom: 0; }
 
-    .details .name {
-        font-weight: bold;
-    }
+  .job::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--accent);
+  }
 
-    .details .desc {
-        text-align: justify;
-    }
+  .job.current::before { background: var(--accent); }
 
-    a {
-        text-decoration: none;
-        color: #000;
-        font-style: italic;
-    }
+  .job-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+  }
 
-    a:hover {
-        text-decoration: underline;
-        color: #000;
-    }
+  .job-title { font-weight: 700; font-size: 10.5pt; }
+  .job-title .at { font-weight: 500; color: var(--muted); font-size: 9pt; }
+  .job.compact { padding-bottom: 8px; }
+  .job.compact p { font-size: 9pt; }
 
-   .details .skills__item {
-        margin-bottom: 10px;
-    }
+  .date {
+    font-size: 8.5pt;
+    font-weight: 600;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 1px 8px;
+    border-radius: 10px;
+    white-space: nowrap;
+  }
 
-    .details .skills__item .right input {
-        display: none;
-    }
+  .org { color: var(--muted); font-size: 9pt; font-weight: 500; margin-bottom: 4px; }
 
-    .details .skills__item .right label {
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        background: #C3DEF3;
-        border-radius: 15px;
-        margin-right: 3px;
-    }
+  .job p { color: #333b4b; }
 
-    .details .skills__item .right input:checked + label {
-        background: #79A9CE;
-    }
+  .job ul {
+    margin: 6px 0 0 14px;
+    color: #333b4b;
+  }
 
-    .text {
-        text-align: justify;
-    }
+  .job li { margin-bottom: 1px; font-size: 8.7pt; line-height: 1.45; break-inside: avoid; }
+  .job li b { color: var(--ink); font-weight: 600; }
 
-    @media (max-width: 640px) {
-        .header {
-            flex-direction: column;
-        }
+  .stack {
+    margin-top: 5px;
+    font-size: 8.5pt;
+    color: var(--muted);
+  }
 
-        .header img {
-            width: max-content;
-            margin-bottom: 10px;
-        }
-        .skills__item, .section__list-item {
-            flex-direction: column;
-            display: flex;
-        }
+  .stack b { color: var(--ink); font-weight: 600; }
 
-        .details .skills__item .right,
-        .section__list-item .right {
-            width: 100%;
-            text-align: left;
-        }
-    }
+  /* ---------- Projects ---------- */
+  .project { margin-bottom: 11px; break-inside: avoid; }
+  .project:last-child { margin-bottom: 0; }
 
-    @media (max-width: 480px) {
-        .header .full-name {
-            font-size: 32px;
-        }
-    }
-    @media (max-width: 380px) {
-        .section__list-item {
-            display: flex;
-            flex-direction: column;
-        }
+  .project-name { font-weight: 700; font-size: 10pt; }
+  .project-name a { color: var(--ink); }
+  .project-name i { font-size: 7.5pt; color: var(--accent); margin-left: 5px; }
+  .project p { color: #333b4b; font-size: 8.8pt; }
 
-        .section__list-item .left, .section__list-item .right {
-            width: 100%;
-            text-align: left;
-        }
+  /* ---------- Sidebar ---------- */
+  .side .group { margin-bottom: 10px; }
+  .side .group-title {
+    font-size: 8.5pt;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 5px;
+  }
 
-        .header .full-name {
-            font-size: 32px;
-        }
-    }
+  .chips { display: flex; flex-wrap: wrap; gap: 4px; }
 
-    @media print {
-      body {
-        background: #fff;
-        padding: 0;
-        font-size: 12px;
-        line-height: 18px;
-      }
-      
-      .container {
-        max-width: 100%;
-        margin: 0;
-        padding: 20px;
-        box-shadow: none;
-        border-radius: 0;
-      }
-      
-      .header {
-        margin-bottom: 20px;
-      }
-      
-      .header img {
-        height: 120px !important;
-      }
-      
-      .details .section {
-        margin-bottom: 25px;
-      }
-      
-      .details .section__list-item {
-        margin-bottom: 20px;
-      }
-      
-      .details .left {
-        width: 40%;
-      }
-      
-      .details .right {
-        width: 59%;
-        text-align: left;
-      }
-      
-      .page-break {
-        page-break-before: always;
-        break-before: page;
-      }
-      
-      a {
-        color: #000;
-        text-decoration: none;
-      }
-    }
-  </style>
-<div class="container">
-    <div class="header" style="display: flex">
-        <img src="https://bazlur36.github.io/images/35_bazlur-passport-sized-photo.JPG"
-             style="height: 160px; margin-right: 10px"/>
-        <div>
-            <div class="full-name">
-                <span class="first-name">Bazlur</span>
-                <span class="last-name">Rashid</span>
-            </div>
-            <div class="contact-info">
-                <span class="email">Email: </span>
-                <span class="email-val">mailtobazlur@gmail.com</span>
-                <span class="separator"></span>
-                <span class="phone">Phone: </span>
-                <span class="phone-val">+8801912923465</span>
-            </div>
+  .chip {
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: #f1f4f8;
+    border: 1px solid var(--line);
+    color: #2b3445;
+  }
 
-            <div class="about">
-                <span class="position">Full Stack Software Engineer </span>
-                <p class="desc" style="line-height: 20px !important; text-align: justify">
-                    Full Stack Software Engineer with 17+ years of experience in Ruby on Rails, Laravel, ReactJS and Python. Expert in OOP, MVC architecture, RESTful API design, and TDD with RSpec/Capybara. Proficient in PostgreSQL, MySQL, data modelling, ETL, performance optimization, and code reviews. Experienced in Machine Learning (churn prediction with XGBoost, recommendation systems, market basket analysis, RFM segmentation) using pandas, scikit-learn and FastAPI. For the last year I have been building software through AI-assisted "vibe coding" with Claude Code and other Agentic AI tools (Claude Sonnet/Opus, GPT-4o, Gemini, Mistral, MiniMax), delivering 10+ production projects.
-                </p>
-            </div>
-        </div>
+  .chip.strong {
+    background: var(--accent-soft);
+    border-color: #b9e2dc;
+    color: #0b5a54;
+    font-weight: 600;
+  }
+
+  .edu { margin-bottom: 10px; }
+  .edu:last-child { margin-bottom: 0; }
+  .edu-degree { font-weight: 700; font-size: 9.2pt; line-height: 1.35; }
+  .edu-school { font-size: 8.8pt; color: var(--muted); line-height: 1.35; margin-top: 2px; }
+  .edu-date { font-size: 8.3pt; color: var(--accent); font-weight: 600; margin-top: 2px; }
+
+  .links li {
+    list-style: none;
+    font-size: 8.2pt;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  .links i { color: var(--accent); width: 14px; text-align: center; font-size: 10pt; }
+
+  .highlights li {
+    list-style: none;
+    font-size: 8.8pt;
+    margin-bottom: 7px;
+    padding-left: 12px;
+    position: relative;
+    line-height: 1.4;
+  }
+
+  .highlights li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    background: var(--accent);
+    border-radius: 1px;
+  }
+
+  .highlights b { font-weight: 700; }
+
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 820px) {
+    .cv { width: 100%; margin: 0; min-height: auto; }
+    .hero { flex-direction: column; text-align: center; padding: 24px 20px; }
+    .hero .contacts { justify-content: center; }
+    .body { grid-template-columns: 1fr; padding: 24px 20px; }
+    .side { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; }
+    .job-head { flex-direction: column; gap: 2px; }
+  }
+
+  /* ---------- Print / PDF ---------- */
+  @page { size: A4; margin: 9mm 0 9mm 0; }
+  @page :first { margin-top: 0; }
+
+  @media print {
+    body { background: #fff; }
+    .cv { width: 100%; margin: 0; box-shadow: none; min-height: auto; }
+    .body { padding-bottom: 0; }
+    a:hover { text-decoration: none; }
+    h2 { break-after: avoid; }
+    .job-head, .org { break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="cv">
+
+  <header class="hero">
+    <img src="images/35_bazlur-passport-sized-photo.JPG" alt="Bazlur Rashid">
+    <div>
+      <h1>Bazlur <span>Rashid</span></h1>
+      <div class="role">Senior Full Stack Software Engineer &nbsp;·&nbsp; AI/ML Engineer</div>
+      <div class="contacts">
+        <a href="mailto:mailtobazlur@gmail.com"><i class="fas fa-envelope"></i>mailtobazlur@gmail.com</a>
+        <a href="tel:+8801912923465"><i class="fas fa-phone"></i>+880 1912 923465</a>
+        <span><i class="fas fa-location-dot"></i>Dhaka, Bangladesh</span>
+        <a href="https://bazlur36.github.io" target="_blank"><i class="fas fa-globe"></i>bazlur36.github.io</a>
+      </div>
     </div>
-    <div class="details">
-        <div class="section">
-            <div class="section__title">Experience</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="left" style="width: 100%">
-                        <div class="name">Fountain IT Limited - Sr. Software Engineer</div>
-                        <div class="addr">Adabar, Dhaka | Aug 2020 - Current</div>
-                        <div class="desc">
-                            Lead full-stack and AI/ML engineer delivering products end-to-end using AI-assisted "vibe coding" with Claude Code: requirements, database design, RESTful APIs, testing, deployment and code reviews. Technologies: Laravel, Ruby on Rails, ReactJS, Redux, Python, FastAPI, scikit-learn, XGBoost, PostgreSQL, MySQL, Redis, Docker, AWS.
-                            <ul style="margin: 6px 0 0 18px; padding: 0; line-height: 18px;">
-                                <li><b>Fountain Analytics &amp; Recommendation Platform:</b> Designed and fully developed an on-premise ML platform for retail/telecom: ETL pipeline, XGBoost churn prediction (AUC 0.95), hybrid recommender (collaborative filtering, Apriori/FP-Growth market basket, content-based), RFM segmentation, item drop-off detection and campaign management. Python, FastAPI, pandas, scikit-learn, PostgreSQL/MySQL, Redis, Docker.</li>
-                                <li><b>RevUP:</b> Data-normalization tool mapping POS and e-commerce databases into a common analytics schema for downstream churn and recommendation analytics (Python).</li>
-                                <li><b>Fountix Hotel Management (Premium/Advanced/Basic editions):</b> Hotel &amp; resort PMS with guest folio ledger, night audit, check-in/out, F&amp;B outlet billing and discounts; deployed for Adi Bhawal Resort and Grand Bhawal Resort.</li>
-                                <li><b>APX Hotel Staff Management:</b> Attendance, duty roster, payroll, inventory, complaints and Firebase push notifications for hotel staff (Laravel).</li>
-                                <li><b>Fountain HSE &amp; Incident Management:</b> Health, Safety &amp; Environment system with incident wizard, approval workflow, investigation, CAPA, audits, asset registry and executive dashboard.</li>
-                                <li><b>Connectras:</b> Multi-tenant membership &amp; engagement platform for alumni/professional bodies: membership, fee reconciliation, events, payments and audit logs (Laravel, Docker).</li>
-                                <li><b>Office Management &amp; Garments ERP:</b> HR and finance suite: leave, payroll, holidays, invoices/challans, expense claims, TDS challans and document renewals.</li>
-                                <li><b>Multi-store POS &amp; E-commerce (Korean Beauty House, Protein, aCommerce):</b> Multi-branch point-of-sale with store scoping and an integrated e-commerce storefront package.</li>
-                                <li><b>Happy Kids:</b> School-uniform retail/wholesale platform: Laravel JSON API and admin panel with React (Vite) + Redux Toolkit/Saga storefront.</li>
-                                <li><b>Digital Presence Audit:</b> Field-sales tool that scores a business's online presence and generates product recommendations.</li>
-                                <li><b>CreativeLawyer CCM:</b> Contract and legal-service management with contract risk rating (likelihood &times; impact).</li>
-                                <li><b>Robi Digital Asset Management:</b> Laravel web service and ReactJS front end for Robi Axiata's DAM.</li>
-                                <li><b>Tender &amp; Technical Proposals:</b> Prepared technical solution proposals for e-GP tenders (BIAM Foundation, UNDP).</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="section__list-item">
-                    <div class="left" style="width: 100%">
-                        <div class="name">NG Solutions System Limited - Sr. Software Engineer</div>
-                        <div class="addr">Adabar, Dhaka | June 2017 - July 2020</div>
-                        <div class="desc">
-                            Built and maintained efficient, reusable Laravel applications applying OOP and MVC patterns. Designed RESTful APIs for web and mobile platforms, implemented automated testing frameworks, and collaborated with front-end developers on React integration. Participated in peer code reviews to maintain high code quality standards and ensure best practices. Technologies: Laravel, ReactJS, PostgreSQL, MySQL, AWS.
-                        </div>
-                    </div>
-                </div>
-                <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">Dnet</div>
-                        <div class="addr">Mohammadpur, Dhaka</div>
-                        <div class="duration">April 2015 - May 2017</div>
-                    </div>
-                    <div class="right">
-                        <div class="name" style="text-align: right;">Sr. Software Engineer</div>
-                        <div class="desc" style="text-align: right;">Web application development with PHP, Laravel, Wordpress, Drupal, HTML5,
-                            CSS3
-                        </div>
-                    </div>
-                </div>
-                <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">NASCENIA IT</div>
-                        <div class="addr">Lalmatia, Dhaka</div>
-                        <div class="duration">Sept 2014 - April 2015</div>
-                    </div>
-                    <div class="right">
-                        <div class="name" style="text-align: right;">Sr. Software Engineer</div>
-                        <div class="desc" style="text-align: right;">Software Development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap3,
-                            jQuery
-                        </div>
-                    </div>
-                </div>
-                <div class="section__list-item">
-                    <div class="left">
-                        <div class="name">Tasawr Interactive</div>
-                        <div class="addr">Mohakhali DOHS, Dhaka</div>
-                        <div class="duration">Dec 2007 - Aug 2014</div>
-                    </div>
-                    <div class="right">
-                        <div class="name" style="text-align: right;">Software Engineer</div>
-                        <div class="desc" style="text-align: right;">Web Application Development with Ruby On Rails, MySQL, Drupal,
-                            Joomla, Wordpress
-                        </div>
-                    </div>
-                </div>
+  </header>
 
-            </div>
+  <div class="body">
+
+    <!-- ================= MAIN ================= -->
+    <main class="main">
+
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">
+          Full Stack Software Engineer with 17+ years of experience in Ruby on Rails, Laravel, ReactJS and Python.
+          Expert in OOP, MVC architecture, RESTful API design, and TDD with RSpec/Capybara. Proficient in PostgreSQL,
+          MySQL, data modelling, ETL, performance optimization, and code reviews. Experienced in Machine Learning
+          (churn prediction with XGBoost, recommendation systems, market basket analysis, RFM segmentation) using
+          pandas, scikit-learn and FastAPI. For the last year I have been building software through AI-assisted
+          "vibe coding" with Claude Code and other Agentic AI tools (Claude Sonnet/Opus, GPT-4o, Gemini, Mistral,
+          MiniMax), delivering 10+ production projects.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job current">
+          <div class="job-head">
+            <div class="job-title">Sr. Software Engineer</div>
+            <div class="date">Aug 2020 – Present</div>
+          </div>
+          <div class="org">Fountain IT Limited · Adabar, Dhaka</div>
+          <p>
+            Lead full-stack and AI/ML engineer delivering products end-to-end using AI-assisted "vibe coding" with
+            Claude Code: requirements, database design, RESTful APIs, testing, deployment and code reviews.
+          </p>
+          <ul>
+            <li><b>Fountain Analytics &amp; Recommendation Platform:</b> Designed and fully developed an on-premise ML platform for churn prediction, recommendations and campaign management (see Selected Projects).</li>
+            <li><b>RevUP:</b> Data-normalization tool mapping POS and e-commerce databases into a common analytics schema for downstream churn and recommendation analytics (Python).</li>
+            <li><b>Fountix Hotel Management (Premium/Advanced/Basic):</b> Hotel &amp; resort PMS with guest folio ledger, night audit, check-in/out, F&amp;B outlet billing and discounts; deployed for Adi Bhawal Resort and Grand Bhawal Resort.</li>
+            <li><b>APX Hotel Staff Management:</b> Attendance, duty roster, payroll, inventory, complaints and Firebase push notifications for hotel staff (Laravel).</li>
+            <li><b>Fountain HSE &amp; Incident Management:</b> Health, Safety &amp; Environment system with incident wizard, approval workflow, investigation, CAPA, audits, asset registry and executive dashboard.</li>
+            <li><b>Connectras:</b> Multi-tenant membership &amp; engagement platform for alumni/professional bodies: membership, fee reconciliation, events, payments and audit logs (Laravel, Docker).</li>
+            <li><b>Office Management &amp; Garments ERP:</b> HR and finance suite: leave, payroll, holidays, invoices/challans, expense claims, TDS challans and document renewals.</li>
+            <li><b>Multi-store POS &amp; E-commerce (Korean Beauty House, Protein, aCommerce):</b> Multi-branch point-of-sale with store scoping and an integrated e-commerce storefront package.</li>
+            <li><b>Happy Kids:</b> School-uniform retail/wholesale platform: Laravel JSON API and admin panel with React (Vite) + Redux Toolkit/Saga storefront.</li>
+            <li><b>Digital Presence Audit:</b> Field-sales tool that scores a business's online presence and generates product recommendations.</li>
+            <li><b>CreativeLawyer CCM:</b> Contract and legal-service management with contract risk rating (likelihood &times; impact).</li>
+            <li><b>Robi Digital Asset Management:</b> Laravel web service and ReactJS front end for Robi Axiata's DAM.</li>
+            <li><b>Tender &amp; Technical Proposals:</b> Prepared technical solution proposals for e-GP tenders (BIAM Foundation, UNDP).</li>
+          </ul>
+          <div class="stack"><b>Stack:</b> Laravel, Ruby on Rails, ReactJS, Redux, Python, FastAPI, scikit-learn, XGBoost, PostgreSQL, MySQL, Redis, Docker, AWS</div>
         </div>
 
-        <div class="section">
-            <div class="section__title">Recent Projects</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="name">Fountain Analytics &amp; Recommendation Platform (Machine Learning)</div>
-                    <div class="text">Fully designed and developed an on-premise analytics and recommendation platform that helps retail, telecom and service businesses reduce customer churn and grow basket size. Built the ETL pipeline, an XGBoost churn-prediction model (AUC 0.95), a hybrid recommender (ALS collaborative filtering, Apriori/FP-Growth market basket analysis, content-based), RFM customer segmentation, item drop-off detection, discount optimization and campaign management, with Excel/PDF reports and a REST API. Built with AI-assisted vibe coding in Claude Code. Stack: Python, FastAPI, pandas, scikit-learn, XGBoost, PostgreSQL/MySQL, Redis, Docker.
-                    </div>
-                </div>
-
-                <div class="section__list-item">
-                    <div class="name"><a href="https://dam.robi.com.bd" target="_blank"> Digital Asset Management</a>
-                    </div>
-                    <div class="text">Led full-stack development using Laravel (backend) and ReactJS with Redux/Saga (frontend). Designed scalable architecture following MVC and OOP principles, created RESTful APIs for web and mobile platforms, and implemented automated testing. Conducted code reviews, managed UAT, and optimized performance for enhanced user engagement and operational efficiency.
-                    </div>
-                </div>
-
-                <div class="section__list-item">
-                    <div class="name"><a href="https://www.dearbrightly.com/" target="_blank">DearBrightly</a>
-                    </div>
-                    <div class="text">Developed scalable Ruby on Rails backend applying OOP principles and MVC architecture. Designed and integrated RESTful APIs with third-party services (DoseSpot, Curexa) for prescription generation and order placement. Implemented automated testing with RSpec, optimized database queries (PostgreSQL), and ensured secure, compliant workflows between healthcare providers and patients.
-                    </div>
-                </div>
- <div class="page-break"></div>
-                <div class="section__list-item">
-                    <div class="name"><a href="https://www.uphance.com/" target="_blank">Uphance ERP</a></div>
-                    <div class="text">As a Full Stack Ruby on Rails Developer at Uphance, a leading B2B apparel ERP on a
-                        SaaS model, I focused on fixing production bugs, adding new features, and collaborating on
-                        client-specific solutions. My expertise included Ruby on Rails 4, MySQL, jQuery, CSS3, and
-                        HTML5, helping to improve platform reliability and meet client needs efficiently.
-                    </div>
-                </div>
-                <div class="section__list-item">
-                    <div class="name"><a href="https://www.pickmybrain.world/" target="_blank">PickMyBrain.world</a>
-                    </div>
-                    <div class="text">As a Full Stack Rails Developer at PickMyBrain.world, I engaged with stakeholders
-                        to understand their needs, designed and implemented solutions using Ruby on Rails, jQuery,
-                        ReactJS, and PostgreSQL. My role included designing scalable systems and databases, and
-                        integrating front and back-end components to enhance platform functionality and user experience,
-                        significantly contributing to the platform's development.
-                    </div>
-                </div>
-            </div>
+        <div class="job">
+          <div class="job-head">
+            <div class="job-title">Sr. Software Engineer</div>
+            <div class="date">Jun 2017 – Jul 2020</div>
+          </div>
+          <div class="org">NG Solutions System Limited · Adabar, Dhaka</div>
+          <p>
+            Built and maintained efficient, reusable Laravel applications applying OOP and MVC patterns. Designed
+            RESTful APIs for web and mobile platforms, implemented automated testing frameworks, and collaborated
+            with front-end developers on React integration. Participated in peer code reviews to maintain high code
+            quality standards and ensure best practices.
+          </p>
+          <div class="stack"><b>Stack:</b> Laravel, ReactJS, PostgreSQL, MySQL, AWS</div>
         </div>
-        <div class="section">
-            <div class="section__title">Skills</div>
 
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Ruby On Rails
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Laravel
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox"/>
-
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        ReactJs
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        PostgreSQL
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Amazon AWS
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        MySQL
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        OOP & MVC Architecture
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-<label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        RESTful API Design
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        RSpec & Capybara
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck4"></label>
-                    <input id="ck5" type="checkbox"/>
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        GIT
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-            
-            
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Claude Code / AI Vibe Coding
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Machine Learning (scikit-learn, XGBoost)
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Python &amp; FastAPI
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
-
-            <div class="skills__item">
-                <div class="left">
-                    <div class="name">
-                        Docker
-                    </div>
-                </div>
-                <div class="right">
-                    <input id="ck1" type="checkbox" checked/>
-
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-                    <label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/><label for="ck1"></label>
-                    <input id="ck2" type="checkbox" checked/>
-
-                    <label for="ck5"></label>
-
-                </div>
-            </div>
+        <div class="job compact">
+          <div class="job-head">
+            <div class="job-title">Sr. Software Engineer <span class="at">· Dnet, Mohammadpur</span></div>
+            <div class="date">Apr 2015 – May 2017</div>
+          </div>
+          <p>Web application development with PHP, Laravel, WordPress, Drupal, HTML5 and CSS3.</p>
         </div>
-        <div class="section">
-            <div class="section__title">Education</div>
-            <div class="section__list">
-                <div class="section__list-item">
-                    <div class="left" style="width: 100%">
-                        <div class="name">BSc in Computer Science and Engineering</div>
-                        <div class="addr">Khulna University of Engineering & Technology, Bangladesh</div>
-                        <div class="duration">March 2003 - March 2007</div>
-                    </div>
-                </div>
 
-                <div class="section__list-item">
-                    <div class="left" style="width: 100%">
-                        <div class="name">MBA in Management Information Systems</div>
-                        <div class="addr">University of Dhaka, Bangladesh</div>
-                        <div class="duration">Jan 2009 - Aug 2010</div>
-                    </div>
-                </div>
-            </div>
+        <div class="job compact">
+          <div class="job-head">
+            <div class="job-title">Sr. Software Engineer <span class="at">· Nascenia IT, Lalmatia</span></div>
+            <div class="date">Sep 2014 – Apr 2015</div>
+          </div>
+          <p>Software development with Ruby on Rails, MySQL, HTML5, CSS3, Bootstrap 3 and jQuery.</p>
+        </div>
 
+        <div class="job compact">
+          <div class="job-head">
+            <div class="job-title">Software Engineer <span class="at">· Tasawr Interactive, Mohakhali</span></div>
+            <div class="date">Dec 2007 – Aug 2014</div>
+          </div>
+          <p>Web application development with Ruby on Rails, MySQL, Drupal, Joomla and WordPress.</p>
         </div>
-        <div class="section">
-            <div class="section__title">
-                Links
-            </div>
-            <div class="section__list">
-                <div class="section__list-item" style="margin-bottom: 5px">
-                    <a href="https://www.linkedin.com/in/bazlurrashid/" target="_blank"><i class="fab fa-linkedin"></i>
-                        https://www.linkedin.com/in/bazlurrashid</a>
-                </div>
-                <div class="section__list-item" style="margin-bottom: 5px">
-                    <a href="https://github.com/bazlur36" target="_blank"><i class="fab fa-github"></i>
-                        https://github.com/bazlur36</a>
-                </div>
-                <div class="section__list-item" style="margin-bottom: 5px">
-                    <a href="https://www.facebook.com/bazlur.rashid" target="_blank"><i class="fab fa-facebook-f"></i>
-                        https://www.facebook.com/bazlur.rashid</a>
-                </div>
-            </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+
+        <div class="project">
+          <div class="project-name">Fountain Analytics &amp; Recommendation Platform <span style="font-weight:500;color:var(--muted)">· Machine Learning</span></div>
+          <p>
+            On-premise analytics and recommendation platform that helps retail, telecom and service businesses reduce
+            customer churn and grow basket size. Built the ETL pipeline, an XGBoost churn-prediction model (AUC 0.95),
+            a hybrid recommender (ALS collaborative filtering, Apriori/FP-Growth market basket analysis, content-based),
+            RFM customer segmentation, item drop-off detection, discount optimization and campaign management, with
+            Excel/PDF reports and a REST API. Built with AI-assisted vibe coding in Claude Code.
+            <br><span class="stack"><b>Stack:</b> Python, FastAPI, pandas, scikit-learn, XGBoost, PostgreSQL/MySQL, Redis, Docker</span>
+          </p>
         </div>
-    </div>
+
+        <div class="project">
+          <div class="project-name"><a href="https://dam.robi.com.bd" target="_blank">Robi Digital Asset Management<i class="fas fa-arrow-up-right-from-square"></i></a></div>
+          <p>
+            Led full-stack development using Laravel (backend) and ReactJS with Redux/Saga (frontend). Designed scalable
+            architecture following MVC and OOP principles, created RESTful APIs for web and mobile platforms, and
+            implemented automated testing. Conducted code reviews, managed UAT, and optimized performance for enhanced
+            user engagement and operational efficiency.
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-name"><a href="https://www.dearbrightly.com/" target="_blank">DearBrightly<i class="fas fa-arrow-up-right-from-square"></i></a></div>
+          <p>
+            Developed a scalable Ruby on Rails backend applying OOP principles and MVC architecture. Designed and
+            integrated RESTful APIs with third-party services (DoseSpot, Curexa) for prescription generation and order
+            placement. Implemented automated testing with RSpec, optimized PostgreSQL queries, and ensured secure,
+            compliant workflows between healthcare providers and patients.
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-name"><a href="https://www.uphance.com/" target="_blank">Uphance ERP<i class="fas fa-arrow-up-right-from-square"></i></a></div>
+          <p>
+            Full Stack Ruby on Rails developer on a leading B2B apparel ERP (SaaS): fixed production bugs, added new
+            features and collaborated on client-specific solutions using Ruby on Rails 4, MySQL, jQuery, CSS3 and
+            HTML5, improving platform reliability.
+          </p>
+        </div>
+
+        <div class="project">
+          <div class="project-name"><a href="https://www.pickmybrain.world/" target="_blank">PickMyBrain.world<i class="fas fa-arrow-up-right-from-square"></i></a></div>
+          <p>
+            Engaged with stakeholders to understand their needs, then designed and implemented solutions using Ruby on
+            Rails, jQuery, ReactJS and PostgreSQL. Designed scalable systems and databases and integrated front- and
+            back-end components to enhance platform functionality and user experience.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ================= SIDEBAR ================= -->
+    <aside class="side">
+
+      <section>
+        <h2>At a Glance</h2>
+        <ul class="highlights">
+          <li><b>17+ years</b> building web applications</li>
+          <li><b>10+ production projects</b> delivered with AI-assisted development</li>
+          <li><b>AUC 0.95</b> XGBoost churn-prediction model</li>
+          <li>End-to-end ownership: requirements → deployment</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+
+        <div class="group">
+          <div class="group-title">Backend</div>
+          <div class="chips">
+            <span class="chip strong">Ruby on Rails</span>
+            <span class="chip strong">Laravel</span>
+            <span class="chip strong">Python</span>
+            <span class="chip strong">FastAPI</span>
+            <span class="chip">PHP</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Frontend</div>
+          <div class="chips">
+            <span class="chip strong">ReactJS</span>
+            <span class="chip">Redux / Saga</span>
+            <span class="chip">Vite</span>
+            <span class="chip">jQuery</span>
+            <span class="chip">HTML5 / CSS3</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Data &amp; Machine Learning</div>
+          <div class="chips">
+            <span class="chip strong">PostgreSQL</span>
+            <span class="chip strong">MySQL</span>
+            <span class="chip">Redis</span>
+            <span class="chip strong">scikit-learn</span>
+            <span class="chip strong">XGBoost</span>
+            <span class="chip">pandas</span>
+            <span class="chip">ETL</span>
+            <span class="chip">Recommender Systems</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">DevOps &amp; Tools</div>
+          <div class="chips">
+            <span class="chip strong">Docker</span>
+            <span class="chip">AWS</span>
+            <span class="chip strong">Git</span>
+            <span class="chip">Firebase</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">Engineering Practices</div>
+          <div class="chips">
+            <span class="chip strong">OOP &amp; MVC</span>
+            <span class="chip strong">RESTful API Design</span>
+            <span class="chip">TDD · RSpec / Capybara</span>
+            <span class="chip">Code Reviews</span>
+            <span class="chip">Performance Tuning</span>
+          </div>
+        </div>
+
+        <div class="group">
+          <div class="group-title">AI-Assisted Development</div>
+          <div class="chips">
+            <span class="chip strong">Claude Code</span>
+            <span class="chip">Claude Sonnet / Opus</span>
+            <span class="chip">GPT-4o</span>
+            <span class="chip">Gemini</span>
+            <span class="chip">Mistral</span>
+            <span class="chip">MiniMax</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu">
+          <div class="edu-degree">MBA in Management Information Systems</div>
+          <div class="edu-school">University of Dhaka, Bangladesh</div>
+          <div class="edu-date">Jan 2009 – Aug 2010</div>
+        </div>
+        <div class="edu">
+          <div class="edu-degree">BSc in Computer Science &amp; Engineering</div>
+          <div class="edu-school">Khulna University of Engineering &amp; Technology, Bangladesh</div>
+          <div class="edu-date">Mar 2003 – Mar 2007</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Links</h2>
+        <ul class="links">
+          <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/bazlurrashid/" target="_blank">linkedin.com/in/bazlurrashid</a></li>
+          <li><i class="fab fa-github"></i><a href="https://github.com/bazlur36" target="_blank">github.com/bazlur36</a></li>
+          <li><i class="fab fa-facebook-f"></i><a href="https://www.facebook.com/bazlur.rashid" target="_blank">facebook.com/bazlur.rashid</a></li>
+        </ul>
+      </section>
+
+    </aside>
+  </div>
 </div>
-</div>
-
 </body>
 </html>
